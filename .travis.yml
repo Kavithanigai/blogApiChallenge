@@ -1,2 +1,9 @@
 language: node_js
 node_js: node
+deploy:
+  provider: heroku
+  api_key:
+    secure: ZRZoQeRAvFofN/AKD0BUJ9F4RzeXRKkpmGMNHw8rkzXFo6NMI9dvigPqntkHnMxdRpL05msXzgqi8jZ5vwDBCddAqxEguS0K4B2JEm76YgVd+SoDgzy+drmvQHjaN+U/jahvsBMz9NFpzNWeERCq4KJkzON8F/eM503zJHMMFLie67wO7RVUHqUwb6XNCwv80loj1ZXgaqubtoiueGkwe1sfgxfQ8FIz1PNSgI5AHt5w6uuCfG2AE/LqIAt5H32PLylc4b/47yzlp8qjAQ0liiQgcdMsHISoKyyHjELgjmNZ3y8g6fcZ1Cl7gRM19eCYUfWPSLv34VPMCnKwIyV/w4Dfq+F3FSZVviHy5yVgiyjnT+qWG+vvzmDV3sfe70NoJA0IuJPkni18pXifoCSLHZwRuW2XK44zSnkTFKxi58ehOWuX2ayVItygMgAP5eB9TDAQos54m6GW0GzyouZ4vbKXBYwAI2+sxi/02WNZ8YReHkNnf+FzfUMKD3ciZOYA2HS/xOW+YkkfbYvzdXTf89R/wGsfANnZB9fwLPaH9IkGpOJhJvwg7IlB1wFo/JnJCPxPo+MdEnR73MlPQzg3rYWtjaGUAas0oUrgiyazv/VBnA1nIkJgJcQmd2XDvO3txlRrk9DFgL4Y+4MwSuFuCkbk47ZERvsK1q01OwyFBFk=
+  app: nameless-beyond-91848
+  on:
+    repo: Kavithanigai/blogApiChallenge
