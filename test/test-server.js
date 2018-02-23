@@ -48,7 +48,7 @@ describe('BlogPosts', function(){
      .then(function(res){
        expect(res).to.be.json;
        expect(res).to.have.status(201);
-       expect(res.body).to.e.a('oject');
+       expect(res.body).to.be.a('object');
        expect(res.body).to.include.keys('id','title', 'content', 'author', 'publishDate');
        expect(res.body.id).to.not.equal(null);
 
@@ -59,7 +59,7 @@ describe('BlogPosts', function(){
    });
 
    it('To update a existing blog through PUT', function(){
-     const updatePost = { title:'Learning new skills', content:'Practice and persistence makes it perfect'};
+     const updatePost = { title:'Learning new skills', content:'Practice and persistence makes it perfect', author: 'KTV', publishDate:'02/22/2018'};
      return chai.request(app)
      //get id first and then updated
      .get('/blog-posts')
@@ -67,7 +67,7 @@ describe('BlogPosts', function(){
        updatePost.id = res.body[0].id;
        return chai.request(app)
        .put(`/blog-posts/${updatePost.id}`)
-       .send(updatePost)
+       .send(updatePost);
      })
      .then(function(res){
        expect(res).to.have.status(204);
@@ -77,7 +77,7 @@ describe('BlogPosts', function(){
    it('To delete blogs thorugh DELETE', function(){
      return chai.request(app)
      //get id to delete that blog
-     .get('/blof-posts')
+     .get('/blog-posts')
      .then(function(res){
        return chai.request(app)
        .delete(`/blog-posts/${res.body[0].id}`);
